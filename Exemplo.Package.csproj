@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>Exemplo.Package</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Rafael Pessoni</Authors>
+    <Company>SMN</Company>
+    <Icon>./icon.png</Icon>
+    <PackageDescription>Pacote exemplo para mostrar como esse rolê funciona</PackageDescription>
+    <Description>Pacote exemplo para mostrar como esse rolê funciona</Description>
+    <RepositoryUrl>https://github.com/Rafael-Pessoni/Exemplo.Package</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Rafael-Pessoni/Exemplo.Package</PackageProjectUrl>
+    <PackageTags>Common</PackageTags>
+    <Title>Exemplo.Package</Title>
+    <Summary>Pacote exemplo para mostrar como esse rolê funciona</Summary>
+  </PropertyGroup>
+
+</Project>
