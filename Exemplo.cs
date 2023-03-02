@@ -15,4 +15,9 @@ public class Exemplo
     {
         return "Esse é o método exemplo que criamos para mostrar os packages :): " + qualquerCoisa;
     }
+
+    public static string MetodoExemplo4(int qualquerCoisa)
+    {
+        return "Esse é o método exemplo que criamos para mostrar os packages :): " + qualquerCoisa;
+    }
 }
