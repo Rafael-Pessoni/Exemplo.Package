@@ -1,0 +1,32 @@
+name: Build and deploy package
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+
+      - name: Set up .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '6.0.x'
+
+      - name: Add nuget source
+        run: dotnet nuget add source ${{ secrets.PRIVATE_NUGET_URL }} -u ${{ secrets.NUGET_USER }} -p ${{ secrets.NUGET_TOKEN }} --store-password-in-clear-text
+
+      - name: Build with dotnet
+        run: dotnet build --configuration Release
+
+      - name: Test
+        run: dotnet test -l "console;verbosity=detailed"
+
+      - name: Create the Package
+        run: dotnet pack --configuration Release
+
+      - name: Publish
+        run: dotnet nuget push "./bin/Release/*.nupkg" -k ${{ secrets.NUGET_TOKEN }} -s ${{ secrets.PRIVATE_NUGET_URL }}
