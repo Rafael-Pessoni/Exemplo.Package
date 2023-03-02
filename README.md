@@ -14,6 +14,3 @@ comando para limpar o cache local do nuget
 ```
 dotnet nuget locals all --clear
 ```
-
-
-
